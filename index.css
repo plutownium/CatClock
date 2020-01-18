@@ -1,0 +1,99 @@
+img {
+	height: 50%;
+	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body {
+	background-color: rgb(218, 168, 77);
+}
+
+button {
+	color: black;
+	background-color: orange;
+	padding: 10px;
+	border: solid;
+	font-size: 24px;
+}
+
+footer {
+	text-align: center;
+}
+
+select {
+	display: block;
+	padding: 5px;
+	border: solid;
+	font-size: 16px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+span {
+	font-size: 18px;
+}
+
+#alarmButton {
+	margin: auto;
+	display: block;
+}
+
+#clock {
+	text-align: center;
+}
+
+#headline {
+	color: black;
+	font-family: "Lucida Console", Monaco, monospace;
+	text-align: center;
+}
+
+#image-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	background-color: black;
+	color: rgb(240, 214, 166);
+	padding: 3px;
+	font-family: "Trebuchet MS";
+	font-weight: bold;
+	font-size: 15px;
+}
+
+#subtitle {
+	font-family: "Lucida Console", Monaco, monospace;
+	text-align: center;
+}
+
+.alarmButtonDiv {
+	padding: 10px;
+}
+
+.container {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+.timer-text {
+	font-family: "Lucida Console", Monaco, monospace;
+	text-align: center;
+}
+
+.timer {
+	/* padding: 5px;
+	overflow: hidden;
+	width: 90%;
+	display: flex;
+	align-items: flex-start; */
+	display: flex;
+	align-items: center;
+	/* justify-content: space-evenly; */
+}
+
+/* TODO: Align SET WAKE UP TIME with its selector, same for the other 2 */
+/* TODO: Style the clock. */
+/* TODO: Style the rest of the text */
