@@ -24,11 +24,12 @@ const napTimeCat =
 const setAlarm = () => {
 	if (button.innerText == "PARTY TIME! (Activate Alarm)") {
 		// set the alarm
-		compareTimes();
+		checkAlarms();
 		button.innerHTML = "PARTY OVER!";
 	} else if (button.innerText == "PARTY OVER!") {
 		// cancel and reset the app's state
 		cancelAndResetAlarm();
+		clearInterval(alarmChecker);
 		button.innerHTML = "PARTY TIME! (Activate Alarm)";
 		console.log("444");
 	}
@@ -74,8 +75,6 @@ const showCurrentTime = () => {
 	return time;
 };
 
-// console.log(clock.innerHTML);
-
 const getSelectedTimeFromTimers = () => {
 	// https://www.dyn-web.com/tutorials/forms/select/selected.php
 	// get the selected time from the Timers
@@ -89,7 +88,7 @@ const getSelectedTimeFromTimers = () => {
 	};
 };
 
-const compareTimes = () => {
+const checkAlarms = () => {
 	// compares the times selected in the Timers to the current time in showCurrentTime / on the clock
 	const timers = getSelectedTimeFromTimers(); // {wakeup, lunch and nap}
 	const today = new Date();
@@ -98,7 +97,7 @@ const compareTimes = () => {
 		// has to be "==", not "==="
 		// when the time in Timers is equal to showCurrentTime, change the image.
 		if (timers[timer] == currentHour) {
-			// console.log("Match");
+			// console.log("ALARM should go off now");
 			if (timer == "wakeup") {
 				changeImageSrc("Time to wake up!", wakeupTimeCat);
 			} else if (timer == "lunch") {
@@ -108,6 +107,8 @@ const compareTimes = () => {
 			} else {
 				console.log("error! none of wakeup/lunch/nap were given");
 			}
+		} else {
+			cancelAndResetAlarm();
 		}
 	}
 };
@@ -121,7 +122,6 @@ const cancelAndResetAlarm = () => {
 const defaultImageText = () => {
 	const today = new Date();
 	let currentHour = today.getHours();
-	console.log(currentHour);
 
 	if (currentHour >= 4 && currentHour < 12) {
 		displayText.innerHTML = "GOOD MORNING!";
@@ -137,15 +137,16 @@ const defaultImageText = () => {
 // set image text to a time appropriate saying
 defaultImageText();
 
+// button.addEventListener("click", checkAlarms);
+
+// TODO: align SET WAKEUP TIME with its associated selector (for lunchtime and naptime too)
+
+// button.addEventListener("click", compareTimes);
+
 // start the clock upon page load
 showCurrentTime();
 // keep the clock updating by calling showCurrentTime every 1 second
 setInterval(showCurrentTime, 1000);
 
-// button.addEventListener("click", compareTimes);
-
-// TODO: align SET WAKEUP TIME with its associated selector (for lunchtime and naptime too)
-// whats this TODO about? ^^^^^^^
-// TODO: Make "YAY a cat" flash "good evening" after 6pm, "good afternoon" after noon, etc
-// TODO: Allow timer to be set in advance, countdown til the alarm, then trigger when time == alarmTime
-// FIXME: DOES the timer go off when set in advance?
+// check whether "clock time === alarm time(s)" every second
+const alarmChecker = setInterval(checkAlarms, 1000);
