@@ -137,11 +137,7 @@ const defaultImageText = () => {
 // set image text to a time appropriate saying
 defaultImageText();
 
-// button.addEventListener("click", checkAlarms);
-
 // TODO: align SET WAKEUP TIME with its associated selector (for lunchtime and naptime too)
-
-// button.addEventListener("click", compareTimes);
 
 // start the clock upon page load
 showCurrentTime();
