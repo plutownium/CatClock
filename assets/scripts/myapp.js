@@ -24,7 +24,7 @@ const napTimeCat =
 const setAlarm = () => {
 	if (button.innerText == "PARTY TIME! (Activate Alarm)") {
 		// set the alarm
-		setInterval(compareTimes, 5000);
+		compareTimes();
 		button.innerHTML = "PARTY OVER!";
 	} else if (button.innerText == "PARTY OVER!") {
 		// cancel and reset the app's state
