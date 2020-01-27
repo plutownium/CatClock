@@ -105,7 +105,7 @@ const checkAlarms = () => {
 			} else if (timer == "nap") {
 				changeImageSrc("Time to take a nap!", napTimeCat);
 			} else {
-				console.log("error! none of wakeup/lunch/nap were given");
+				changeImageSrc("Look, a cat!", defaultCat);
 			}
 		} else {
 			cancelAndResetAlarm();
