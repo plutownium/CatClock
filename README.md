@@ -6,7 +6,7 @@ Developed in two days after I found the original LOLCATS clock on CodePen, it is
 
 Meaning, I built it myself from the ground up. No peeking at their code!
 
-<h4>You can visit the page here:</h4> https://plutownium.github.io/CatClock/
+<h4>You can visit the page here: https://plutownium.github.io/CatClock/</h4> 
 
 The app still has a bug or two, but as it is right now, you can...
 
