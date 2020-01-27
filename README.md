@@ -19,3 +19,5 @@ The app still has a bug or two, but as it is right now, you can...
 ...and have them all alerted to you via a change in the image and text display!
 
 Not bad for only 148 lines of JavaScript.
+
+P.S. If anyone knows why GitHub refuses to show the main image, I'd love to know.
