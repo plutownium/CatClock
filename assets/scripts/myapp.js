@@ -17,12 +17,19 @@ const displayText = document.getElementById("image-text");
 const defaultCat =
 	"https://www.rd.com/wp-content/uploads/2019/11/cat-10-e1573844975155-768x519.jpg";
 
+// const wakeupTimeCat =
+// 	"C:\\Users\\Roland\\dir2_JS\\January_2020_cat_clock\\assets\\images\\cat-pet-animal.jpeg";
+// const lunchTimeCat =
+// 	"C:\\Users\\Roland\\dir2_JS\\January_2020_cat_clock\\assets\\images\\pregnant+mama.jpg";
+// const napTimeCat =
+// 	"C:\\Users\\Roland\\dir2_JS\\January_2020_cat_clock\\assets\\images\\pexels-photo.jpg";
+
 const wakeupTimeCat =
-	"C:\\Users\\Roland\\dir2_JS\\January_2020_cat_clock\\assets\\images\\cat-pet-animal.jpeg";
+	"https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png";
 const lunchTimeCat =
-	"C:\\Users\\Roland\\dir2_JS\\January_2020_cat_clock\\assets\\images\\pregnant+mama.jpg";
+	"https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2018/06/cat-217679.jpg?h=c4ed616d&itok=3qHaqQ56";
 const napTimeCat =
-	"C:\\Users\\Roland\\dir2_JS\\January_2020_cat_clock\\assets\\images\\pexels-photo.jpg";
+	"https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg";
 
 const setAlarm = () => {
 	if (button.innerText == "PARTY TIME! (Activate Alarm)") {
