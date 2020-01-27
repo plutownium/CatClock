@@ -12,8 +12,11 @@ const clock = document.getElementById("clock");
 
 const displayText = document.getElementById("image-text");
 
+// const defaultCat =
+// 	"C:\\Users\\Roland\\dir2_JS\\January_2020_cat_clock\\assets\\images\\cat-10.jpg";
 const defaultCat =
-	"C:\\Users\\Roland\\dir2_JS\\January_2020_cat_clock\\assets\\images\\cat-10.jpg";
+	"https://www.rd.com/wp-content/uploads/2019/11/cat-10-e1573844975155-768x519.jpg";
+
 const wakeupTimeCat =
 	"C:\\Users\\Roland\\dir2_JS\\January_2020_cat_clock\\assets\\images\\cat-pet-animal.jpeg";
 const lunchTimeCat =
